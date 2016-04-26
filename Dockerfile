@@ -3,7 +3,7 @@ FROM nginx:1.9.3
 MAINTAINER Michał Czeraszkiewicz <contact@czerasz.com>
 
 # Set the reset cache variable
-ENV REFRESHED_AT 2015-08-25
+ENV REFRESHED_AT 2016-04-26
 
 # Update system and install required software
 RUN apt-get update
@@ -21,11 +21,11 @@ RUN apt-get install -y wget \
 RUN mkdir -p /usr/share/GeoIP/ &&\
     wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz &&\
     gunzip GeoLite2-City.mmdb.gz &&\
-    echo "21aa79e9200ded325b14e69daa0f3fab  GeoLite2-City.mmdb" | md5sum -c - &&\
+    echo "cf745423d029f6c880d38196f737b24f  GeoLite2-City.mmdb" | md5sum -c - &&\
     mv GeoLite2-City.mmdb /usr/share/GeoIP/ &&\
     wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz &&\
     gunzip GeoLite2-Country.mmdb.gz &&\
-    echo "5a05534e145ab1ec12edcc9350169ae8  GeoLite2-Country.mmdb" | md5sum -c - &&\
+    echo "451691a768e9d0e44c63c82adb1eba68  GeoLite2-Country.mmdb" | md5sum -c - &&\
     mv GeoLite2-Country.mmdb /usr/share/GeoIP/
 
 # Install C library for reading MaxMind DB files
