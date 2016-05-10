@@ -3,11 +3,11 @@ FROM nginx:1.9.3
 MAINTAINER Michał Czeraszkiewicz <contact@czerasz.com>
 
 # Set the reset cache variable
-ENV REFRESHED_AT 2016-04-26
+ENV REFRESHED_AT 2016-05-10
 
 # Update system and install required software
-RUN apt-get update
-RUN apt-get install -y wget \
+RUN apt-get update &&\
+    apt-get install -y wget \
                        curl \
                        git \
                        build-essential \
