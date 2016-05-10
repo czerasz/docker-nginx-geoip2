@@ -21,11 +21,11 @@ RUN apt-get update &&\
 RUN mkdir -p /usr/share/GeoIP/ &&\
     wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz &&\
     gunzip GeoLite2-City.mmdb.gz &&\
-    echo "cf745423d029f6c880d38196f737b24f  GeoLite2-City.mmdb" | md5sum -c - &&\
+    echo "0ca85433d0568f9cee58830508a8642c  GeoLite2-City.mmdb" | md5sum -c - &&\
     mv GeoLite2-City.mmdb /usr/share/GeoIP/ &&\
     wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz &&\
     gunzip GeoLite2-Country.mmdb.gz &&\
-    echo "451691a768e9d0e44c63c82adb1eba68  GeoLite2-Country.mmdb" | md5sum -c - &&\
+    echo "094695d4bb489c974caf3b9857aaba3c  GeoLite2-Country.mmdb" | md5sum -c - &&\
     mv GeoLite2-Country.mmdb /usr/share/GeoIP/
 
 # Install C library for reading MaxMind DB files
